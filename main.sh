@@ -94,7 +94,7 @@ for their_commit_hash in $(git log "${common_ancestor}...${THEIRS}" --pretty=for
       {
         # !!!
         if cd "$NEGLIDIA_SRC_DIR"; then
-          npm run launch -- --old "$diff_old" --new "$diff_new" --out "$judge"
+          pnpm launch -- --old "$diff_old" --new "$diff_new" --out "$judge"
         else
           die "neglidia not found"
         fi
