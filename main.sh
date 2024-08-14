@@ -93,7 +93,7 @@ for their_commit_hash in $(git log "${common_ancestor}...${THEIRS}" --pretty=for
       git show "$their_commit_hash:$modified_file" > "$diff_new"
       {
         # !!!
-        if cd /home/kisaragi/WebstormProjects/untitled2; then
+        if cd "$NEGLIDIA_SRC_DIR"; then
           npm run launch -- --old "$diff_old" --new "$diff_new" --out "$judge"
         else
           die "neglidia not found"
